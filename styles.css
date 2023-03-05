@@ -240,7 +240,15 @@ button:hover {
 }
 
 @media screen and (max-width: 550px) {
-    .container {
+    main {
+        height: fit-content;
+    }
+
+    .container, .result-container, .summary-container {
         width: 100%;
+    }
+
+    .attribution { 
+        font-size: 8px;
     }
 }
