@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="container">
+        <div class="result-container">
+          <h1>Your Result</h1>
+          <p class="result"><span class="result-number">76</span> of 100</p>
+          <p class="note">Great</p>
+          <p class="considerations">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+        <div class="summary-container">
+          <h2>Summary</h2>
+          <table>
+            <tbody>
+              <tr class="reaction">
+                <td><img src="assets/images/icon-reaction.svg" alt="reaction Icon"></td>
+                <td class="left">Reaction</td>
+                <td>80 <span class="filter">/ 100</span></td>
+              </tr>
+              <tr class="memory">
+                <td><img src="assets/images/icon-memory.svg" alt="Memory Icon"></td>
+                <td class="left">Memory</td>
+                <td>92 <span class="filter">/ 100</span></td>
+              </tr>
+              <tr class="verbal">
+                <td><img src="assets/images/icon-verbal.svg" alt="Verbal Icon"></td>
+                <td class="left">Verbal</td>
+                <td>61 <span class="filter">/ 100</span></td>
+              </tr>
+              <tr class="visual">
+                <td><img src="assets/images/icon-visual.svg" alt="Visual Icon"></td>
+                <td class="left">Visual</td>
+                <td>72 <span class="filter">/ 100</span></td>
+              </tr>  
+            </tbody>
+          </table>
+          <button onclick="window.open('#')">Continue</button>
+        </div>
+      </div>
+    </section>
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/JoseBravoWebDev" target="_blank">José Bravo</a>.
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,246 @@
+@font-face {
+    font-family: Hanken Grotesk;
+
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf'),
+         url('assets/fonts/static/HankenGrotesk-Bold.ttf'),
+         url('assets/fonts/static/HankenGrotesk-ExtraBold.ttf'),
+         url('assets/fonts/static/HankenGrotesk-Medium.ttf');
+}
+
+:root {
+    /* Primary */
+    --reaction: hsl(0, 100%, 67%);
+    --memory: hsl(39, 100%, 56%);
+    --verbal: hsl(166, 100%, 37%);
+    --visual: hsl(234, 85%, 45%);
+
+    /*Opacity*/
+    --opacity: 0.05;
+
+    --reaction-o: hsla(0, 100%, 67%, var(--opacity));
+    --memory-o: hsla(39, 100%, 56%, var(--opacity));
+    --verbal-o: hsla(166, 100%, 37%, var(--opacity));
+    --visual-o: hsla(234, 85%, 45%, var(--opacity));
+
+    /* Background */
+    --background-1: hsl(252, 100%, 67%);
+    --background-2: hsl(241, 81%, 54%);
+
+    --circle-1: hsla(256, 72%, 46%, 1);
+    --circle-2: hsla(241, 72%, 46%, 0);
+
+    /* Neutral / Effects */
+    --neutral-1: hsl(0, 0%, 100%);
+    --box-shadow-1: hsl(221, 100%, 96%);
+    --box-shadow-2: hsl(241, 100%, 89%);
+    --button: hsl(224, 30%, 27%);
+
+    /* Font Weight */
+    --fw-1: 500;
+    --fw-2: 700;
+    --fw-3: 800;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background: var(--neutral-1);
+    font-size: 18px;
+    font-weight: var(--fw-1);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+
+    box-shadow: 10px 10px 20px var(--box-shadow-1);
+}
+
+.result-container, .summary-container {
+    padding: 35px 25px;
+}
+
+.result-container {
+    flex-basis: 275px;
+    background: linear-gradient(
+        var(--background-1),
+        var(--background-2)
+    );
+    border-radius: 20px;
+    text-align: center;
+    color: var(--box-shadow-2);
+}
+
+.result-container h1 {
+    font-size: 18px;
+    font-weight: var(--fw-1);
+    margin-bottom: 25px;
+}
+
+.result {
+    display: grid;
+    place-content: center;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(
+        var(--circle-1),
+        var(--circle-2)
+    );
+
+    font-size: 12px;
+    line-height: 1;
+}
+
+.result-number {
+    color: var(--neutral-1);
+    font-size: 60px;
+    font-weight: var(--fw-3);
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 24px;
+    color: var(--neutral-1);
+    font-weight: var(--fw-2);
+    letter-spacing: 1px;
+}
+
+.considerations {
+    margin-top: 10px;
+    padding: 0px 20px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.summary-container {
+    flex-basis: 275px;
+
+}
+
+.summary-container h2 {
+    font-size: 21px;
+    margin-top: -2px;
+}
+
+table {
+    width: 100%;
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: grid;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: var(--fw-2);
+}
+
+tbody tr {
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 7px;
+}
+
+tr, tr img {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+tr img {
+    margin-top: 1px;
+}
+
+.left {
+    flex: 1;
+    justify-content: left;
+    margin-left: 10px;
+}
+
+.filter {
+    color: var(--box-shadow-2);
+}
+
+.reaction {
+    background: var(--reaction-o);
+}
+
+.reaction .left {
+    color: var(--reaction);
+}
+
+.memory {
+    background: var(--memory-o);
+}
+
+.memory .left {
+    color: var(--memory);
+}
+
+.verbal {
+    background: var(--verbal-o);
+}
+
+.verbal .left {
+    color: var(--verbal);
+}
+
+.visual {
+    background: var(--visual-o);
+}
+
+.visual .left {
+    color: var(--visual);
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    color: var(--neutral-1);
+    font-weight: 500;
+    border: none;
+    background: var(--button);
+    letter-spacing: 1px;
+    padding: 14px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(
+        var(--background-1),
+        var(--background-2)
+    );
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        width: 100%;
+    }
+}
